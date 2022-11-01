@@ -24,7 +24,7 @@ describe('zodiac routes', () => {
   });
 
   it('/horoscopes/:sign should return sign with horoscope', async () => {
-    const res = await request(app).get('/horoscope/leo');
+    const res = await request(app).get('/horoscopes/leo');
     const leoHoroscope = {
       sign: 'leo',
       horoscope:
