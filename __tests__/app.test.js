@@ -1,9 +1,14 @@
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('example test - you should probably update me', () => {
-  it('home route should return hello world', async () => {
-    const resp = await request(app).get('/');
-    expect(resp.text).toEqual('hello world!');
+const { signs } = require('../lib/signs-data.js');
+
+describe('signs routes', () => {
+  it('/signs should return a list of zodiac signs with id', async () => {
+    const res = await request(app).get('/signs');
+    const expected = signs.map((sign) => {
+      return { id: sign.id, name: sign.name };
+    });
+    expect(res.body).toEqual(expected);
   });
 });
