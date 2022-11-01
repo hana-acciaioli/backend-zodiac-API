@@ -22,4 +22,14 @@ describe('zodiac routes', () => {
     };
     expect(res.body).toEqual(aquarius);
   });
+
+  it('/horoscopes/:sign should return sign with horoscope', async () => {
+    const res = await request(app).get('/horoscope/leo');
+    const leoHoroscope = {
+      sign: 'leo',
+      horoscope:
+        'You may think you have class, but really you just have primitive value',
+    };
+    expect(res.body).toEqual(leoHoroscope);
+  });
 });
