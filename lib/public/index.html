@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Zodiac API</h1>
+    <table>
+      <tr>
+        <th>Route</th>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>/zodiac</td>
+        <td>/GET</td>
+        <td>Gets a list of zodiac signs with IDs</td>
+        <td><a href="/zodiac">List of Zodiac Signs</a></td>
+      </tr>
+      <tr>
+        <td>/zodiac/:id</td>
+        <td>/GET</td>
+        <td>Gets a zodiac sign by ID and lists details</td>
+        <td><a href="/zodiac/1">Details of aquarius</a></td>
+      </tr>
+      <tr>
+        <td>/horoscopes/:sign</td>
+        <td>/GET</td>
+        <td>Matches sign to to horoscope</td>
+        <td><a href="/horoscopes/aquarius">Get aquarius horoscope</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
